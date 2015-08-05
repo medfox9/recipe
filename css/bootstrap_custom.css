@@ -10,12 +10,13 @@ body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     background:none;border-bottom:2px solid #fa5623;color:#fa5623;
 }
-.page-header-tit {text-align:center;background:url('../images/global/bg_title.jpg') repeat-x 0 0}
-.page-header-tit h1 {line-height:100%;margin-top:0;font-size:33px;}
+.page-header-tit {text-align:center;background:url('../images/global/bg_title.jpg') repeat-x 0 0;padding:30px 0;}
+.page-header-tit h1 {line-height:100%;margin-top:0;font-size:180%}
 .page-header-tit h1 span {margin-right:5px;}
 .page-header-tit small {font-size:50%;}
 
-#btnLogin {font-weight:normal}
+#btnLogin {margin-left:30px}
+#btnLogin a {font-weight:normal;}
 #btnLogin span {margin-right:5px;}
 
 @media (min-width: 768px) {
@@ -23,6 +24,6 @@ body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';}
     .navbar-nav {padding:15px 0;}
     .navbar-nav>li>a {color:#333;font-size:16px;font-weight:bold}
     .navbar>.container .navbar-brand {position:absolute;left:50%;margin-left:-65px;padding:15px 0;}
-    .page-header-tit {height:146px;line-height:146px;margin-top:0;;}
-
+    .page-header-tit {height:146px;line-height:146px;margin-top:0;;padding-top:45px;}
+    .page-header-tit h1 {line-height:100%;margin-top:0;font-size:33px;}
 }
