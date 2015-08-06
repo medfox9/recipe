@@ -104,7 +104,7 @@ address {margin-bottom:0;}
     .racipe-stuff {width:75%}
     .reple h2 {font-size:26px;}
     .replyBox {bakcground:url('../images/global/bg_canvers.png') repeat 0 0;padding:10px;}
-    .replyBox > .inner {}
+    .replyBox > .inner input::-webkit-input-placeholder {text-align:center}
 }
 
 
@@ -115,6 +115,5 @@ address {margin-bottom:0;}
 
 
 @media (min-width: 1200px) {
-
     .recipeMake .text {width:73%}
 }
