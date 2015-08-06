@@ -56,7 +56,7 @@ address {margin-bottom:0;}
     background-repeat:no-repeat,no-repeat;
     background-position:right bottom,0 0;
     background-size:auto,cover;
-    display:table-cell;height:95px;vertical-align: middle;text-align:center;padding:15px 100px;}
+    display:table-cell;min-height:95px;vertical-align: middle;text-align:center;padding:15px 100px;}
 .recipe-txt p {text-align:left;}
 .racipe-stuff {margin-top:50px}
 .racipe-stuff .top select {margin-top:20px}
@@ -76,13 +76,13 @@ address {margin-bottom:0;}
 .recipeMake .num {display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;background:#4c4c4c;color:#fff;margin-right:10px;}
 .recipeMake .makeNum {margin-top:13px;padding-top:13px;border-top:1px solid #e8e8e8}
 .recipeMake .makeNum:first-child {margin-top:0;padding-top:0;border-top:none;}
-.myTip {height:103px;border:1px solid #e4e3e3;position:relative;padding:25px 60px;background:url('../images/global/bg_canvers.png') repeat-x 0 0}
+.myTip {min-height:103px;border:1px solid #e4e3e3;position:relative;padding:25px 60px;background:url('../images/global/bg_canvers.png') repeat 0 0}
 .myTip .tooltipTxt {position:absolute;left:-20px;top:-30px;}
 .recipeMake .text {width:100%;margin-top:20px;}
 .racipeType {background:#f3f3f3;padding:25px 0;margin-top:45px;font-size:20px;}
 .racipeType img {vertical-align: middle;margin-right:5px;}
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
     body {font-size:80%}
 }
 
@@ -101,16 +101,20 @@ address {margin-bottom:0;}
     .recipeMake .text {width:65%;margin-top:0}
     .recipeMake .contents {width:90%}
     .panel-footer .container {background:url('../images/global/img_logo_footer.jpg') no-repeat 0 35px;padding:35px 0 0 192px;}
+    .racipe-stuff {width:75%}
+    .reple h2 {font-size:26px;}
+    .replyBox {bakcground:url('../images/global/bg_canvers.png') repeat 0 0;padding:10px;}
+    .replyBox > .inner {}
 }
 
 
 @media (min-width: 992px) {
-
+    .racipe-stuff {width:810px}
     .recipeMake .text {width:68%}
 }
 
 
 @media (min-width: 1200px) {
 
-    .recipeMake .text {width:74%}
+    .recipeMake .text {width:73%}
 }
