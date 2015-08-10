@@ -1,7 +1,7 @@
 /*!
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
-body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-size:15px}
+body {font-family: 'Nanum Barun Gothic', sans-serif;font-size:15px;}
+/*body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-size:15px}*/
 #topLine {width:100%;height:25px;background:#e7e6e6;border-bottom:1px solid #dcd9d9}
 .navbar-default {background:none;border:none;border-bottom:1px solid #dcd9d9}
 .navbar {border-radius:0;margin-bottom:0;}
@@ -10,6 +10,8 @@ body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-siz
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     background:none;border-bottom:2px solid #fa5623;color:#fa5623;
 }
+legend {display:none;}
+.icoBack {display:inline-block;}
 /*margin */
 .mgT5 {margin-top:5px !important}
 .mgT10 {margin-top:10px !important}
@@ -65,22 +67,62 @@ address {margin-bottom:0;}
     url('../images/global/bg_stuff_02.jpg');
     background-repeat: no-repeat, repeat-x;
     background-position:0 0,0 0;
-    width:100%;height:286px;padding:21px 0 0 50px;
+    width:100%;height:286px;padding:10px 0 0 50px;
     border-left:1px solid #eaeaea;border-right:1px solid #eaeaea;
-
 }
-.racipe-stuff .stuffTxt ul li {list-style: none;padding-bottom:13px;}
+
+
+.racipe-stuff .stuffTxt ul li {list-style: none;padding-bottom:13px;font-size:16px}
 .recipeMake {margin-bottom:45px}
-.recipeMake .image img {width:100%;}
-.recipeMake .image {margin-right:30px;width:100%}
-.recipeMake .num {display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;background:#4c4c4c;color:#fff;margin-right:10px;}
-.recipeMake .makeNum {margin-top:13px;padding-top:13px;border-top:1px solid #e8e8e8}
+.recipeMake .image img {width:100%;height:100%}
+.recipeMake .image {margin-right:40px;width:100%}
+.recipeMake .num {display:inline-block;width:34px;height:34px;line-height:37px;text-align:center;background:#f47d53;color:#fff;margin-right:15px;border-radius: 50%;font-size:20px}
+.recipeMake .makeNum {margin-top:30px;padding-top:30px;border-top:1px solid #e8e8e8}
 .recipeMake .makeNum:first-child {margin-top:0;padding-top:0;border-top:none;}
-.myTip {min-height:103px;border:1px solid #e4e3e3;position:relative;padding:25px 60px;background:url('../images/global/bg_canvers.png') repeat 0 0}
+.myTip {min-height:103px;border:1px solid #e4e3e3;position:relative;padding:25px 60px;background:url('../images/global/bg_canvers.png') repeat 0 0;margin-top:60px}
 .myTip .tooltipTxt {position:absolute;left:-20px;top:-30px;}
 .recipeMake .text {width:100%;margin-top:20px;}
-.racipeType {background:#f3f3f3;padding:25px 0;margin-top:45px;font-size:20px;}
+.racipeType {background:#f3f3f3;padding:25px 0;margin-top:50px;font-size:20px;}
 .racipeType img {vertical-align: middle;margin-right:5px;}
+.recipeMake .contents {margin-top:7px;}
+.pull-left.tip {position:relative;padding-left:50px;}
+.pull-left.tip span {position:absolute;left:0}
+.recipeTag dl {position:relative;padding-left:50px;overflow:hidden;margin-bottom:0;}
+.recipeTag dt {float:left;font-size:20px;margin-top:16px;}
+.recipeTag dd {float:right;font-size:16px;background:#f2f2f2;padding:10px;margin-left:10px;border-radius: 5px;margin-top:10px;}
+
+/*댓글*/
+.recipeReply h2 {font-size:24px;font-weight:800;color:#343434}
+.recipeReply h2 span {color:#fa5623}
+.replyBox {background:url('../images/global/bg_canvers.png') repeat 0 0;padding:10px;}
+.replyBox .inner {border:1px solid #ccc;border-radius: 5px;position:relative;background:#fff;}
+.replyBox textarea {border:none;height:60px;color:#2b2b2b}
+.replyBox textarea:focus {height:85px}
+.replyBox .inputHidden {position:absolute;right:10px;bottom:10px;display:none}
+.replyBox .inputHidden a {display:inline-block;padding:4px 17px;background:#f25c29;color:#fff;margin-left:10px;border-radius:5px;font-size:15px;}
+.replyBox .inputHidden a:hover {text-decoration:none;}
+.noReply {text-align:center;font-size:18px;color:#3f3f3f}
+.noReply .ico {display:inline-block;margin:30px 0 20px 0}
+.noReply .list {overflow:hidden}
+.replyList .list {margin-top:50px;clear: both;overflow: hidden;}
+.replyList .list:first-child {margin-top:30px;}
+.replyList .list .left {float:left;text-align:center}
+.replyList .list .left p {color:#fa5623;font-size:14px;margin-top:10px;}
+.replyList .list .imgAvata {display:block;width:65px;height:65px;border-radius: 50%}
+.replyList .list .right {float:right;margin-left:15px;width:90%}
+.replyList .list .right .info {font-size:16px;font-weight:bold;color:#2b2b2b;margin-bottom:12px}
+.replyList .list .right .info span {display:inline-block;margin-left:15px;font-size:14px;vertical-align: bottom;color:#a3a3a3}
+.replyList .list .right .txt {color:#393939}
+.replyList .list .delete {color:#a3a3a3;display:inline-block;margin-left:10px;cursor:pointer;font-size:14px}
+.replyList .replyAn {margin-top:10px;font-size:13px;color:#2b2b2b}
+.replyList .replyReplyInp {overflow:hidden;margin-top:30px;}
+.replyList .replyReplyInp:first-of-type {margin-top:10px;}
+.replyList .replyReplyInp .imgAvata {width:40px;height:40px;float:left;margin-right:15px;}
+.replyList .replyReplyInp textarea {float:left;height:40px;border-radius:5px;border-color:#b2b2b2;width:92%}
+.replyList .replyReplyInp .closeReply {display:block;float:right;font-size:13px;color:#a3a3a3;margin-top:5px;}
+.replyList .replyReplyInp.inp {display:none;}
+.replyList .list .right .replyReplyInp .info {margin:5px 0 0px 0}
+
 
 @media (max-width: 320px) {
     body {font-size:80%}
@@ -96,24 +138,23 @@ address {margin-bottom:0;}
     .page-header-tit h1 {line-height:100%;margin-top:0;font-size:33px;}
     .subContents {width:620px;}
     .racipe-stuff .stuffTxt ul {width:250px;}
-    .recipeMake .image {width:180px;height:115px;}
+    .recipeMake .image {width:180px;height:120px;}
     .recipeMake .image img {}
-    .recipeMake .text {width:65%;margin-top:0}
-    .recipeMake .contents {width:90%}
+    .recipeMake .text {width:59%;margin-top:0}
+    .recipeMake .contents {width:84%}
     .panel-footer .container {background:url('../images/global/img_logo_footer.jpg') no-repeat 0 35px;padding:35px 0 0 192px;}
-    .racipe-stuff {width:75%}
+    .racipe-stuff {width:75%;padding:0}
     .reple h2 {font-size:26px;}
-    .replyBox {bakcground:url('../images/global/bg_canvers.png') repeat 0 0;padding:10px;}
-    .replyBox > .inner input::-webkit-input-placeholder {text-align:center}
+    .pull-left.tip {width:58%}
 }
 
 
 @media (min-width: 992px) {
     .racipe-stuff {width:810px}
-    .recipeMake .text {width:68%}
+    .recipeMake .text {width:65%}
 }
 
 
 @media (min-width: 1200px) {
-    .recipeMake .text {width:73%}
+    .recipeMake .text {width:72%}
 }
