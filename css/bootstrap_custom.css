@@ -2,6 +2,7 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 body {font-family: 'Nanum Barun Gothic', sans-serif;font-size:15px;}
 p {margin:0;}
+h2 {font-size:23px;}
 /*body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-size:15px}*/
 #topLine {width:100%;height:25px;background:#e7e6e6;border-bottom:1px solid #dcd9d9}
 .navbar-default {background:none;border:none;border-bottom:1px solid #dcd9d9}
@@ -13,6 +14,7 @@ p {margin:0;}
 }
 legend {display:none;}
 .icoBack {display:inline-block;}
+.icoBook {display:inline-block;}
 /*margin */
 .mgT5 {margin-top:5px !important}
 .mgT10 {margin-top:10px !important}
