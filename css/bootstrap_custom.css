@@ -144,6 +144,22 @@ address {margin-bottom:0;}
 .preview a {position:absolute;right:10px;color:#fff;float:right;font-size:220%;top:50%;margin-top:-20px}
 .preview a:hover {text-decoration:none;}
 
+/* recipe_write */
+.recipeWrite .page-header-tit h1 {border-bottom:1px solid #b5b4b4;width:670px;margin:0 auto;text-align:left;padding-left:45px;}
+.recipeWrite .page-header-tit h1 span {vertical-align: super;font-size:20px;color:#d60d7f;}
+.recipeWrite .page-header-tit h1 input[type='text'] {border:none;background:none;width:510px;}
+.recipeWriteBox {overflow:hidden;width:620px;margin:25px auto 0 auto;padding-top:25px;border-top:1px solid #e3e3e3}
+.recipeWriteBox:first-child {margin-top:45px;padding-top:0;border-top:none}
+.recipeWriteBox label {display:block;float:left;width:120px;font-size:18px;color:#3f3f3f;text-align:right}
+.recipeWriteBox .required {font-size:90%;vertical-align: super;color:#d60d7f}
+.recipeWriteBox .right {width:440px;float:right;}
+.recipeWriteBox .inputIMG {height:210px;display:table;position:relative;}
+.recipeWriteBox .inputIMG .inner {display:table-cell;vertical-align:middle;position:relative;z-index:1;text-align:center;}
+.recipeWriteBox .inputIMG .inner p {color:rgba(255,255,255,0.5);font-size:18px}
+.recipeWriteBox .inputIMG .inner button {border:1px solid #fff;color:#fff;background:none;padding:5px 10px;border-radius:5px;font-size:16px;margin-top:15px;}
+.recipeWriteBox .inputIMG .inpImg {position:absolute;left:0;top:0;z-index:0}
+.recipeWriteBox .hiddenFile {position:absolute;left:0;top:0;visibility: hidden;height:0;font-size:0;width:0;display:block;}
+.recipeWriteBox .story textarea {background:#fafafa}
 @media (max-width: 320px) {
     body {font-size:80%}
     .recipeMake .num {width:20px;height:20px;line-height:24px;font-size:15px;}
@@ -183,8 +199,9 @@ address {margin-bottom:0;}
     .pull-left.tip {width:58%}
     .replyList .list .right {width:85%}
     .pageControl a {top:500px}
-
     .preview {height:100px;line-height:100px;}
+
+
 }
 
 
