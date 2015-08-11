@@ -91,7 +91,7 @@ address {margin-bottom:0;}
 .pull-left.tip {position:relative;padding-left:50px;}
 .pull-left.tip span {position:absolute;left:0}
 .recipeTag dl {position:relative;padding-left:50px;overflow:hidden;margin-bottom:0;}
-.recipeTag dt {float:left;font-size:20px;margin-top:16px;}
+.recipeTag dt {float:left;font-size:20px;margin-top:16px;position:absolute;left:0;}
 .recipeTag dd {float:right;font-size:16px;background:#f2f2f2;padding:10px;margin-left:10px;border-radius: 5px;margin-top:10px;}
 
 /*댓글*/
@@ -150,7 +150,7 @@ address {margin-bottom:0;}
     .recipeMake .contents {width:83%;margin-top:3px;}
     .myTip {padding:25px 10px}
     .myTip .tooltipTxt {width:50px;}
-    .recipeTag dd {font-size:80%;float:left;padding:5px;}
+    .recipeTag dd {font-size:80%;}
     .recipeTag dt {font-size:14px;}
     .recipeTag dl {padding-left:0px;}
     .recipe-txt {padding:75px 15px}
