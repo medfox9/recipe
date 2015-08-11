@@ -1,6 +1,7 @@
 /*!
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 body {font-family: 'Nanum Barun Gothic', sans-serif;font-size:15px;}
+p {margin:0;}
 /*body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-size:15px}*/
 #topLine {width:100%;height:25px;background:#e7e6e6;border-bottom:1px solid #dcd9d9}
 .navbar-default {background:none;border:none;border-bottom:1px solid #dcd9d9}
@@ -54,10 +55,10 @@ address {margin-bottom:0;}
 .subContents .snsGroup a.btnPrint {margin:0 10px 0 20px}
 .recipe-img img {width:100%;}
 .recipe-txt {
-    background-image:url('../images/global/bg_subCon_txt.png'),url('../images/global/bg_subCon_txt.jpg');
-    background-repeat:no-repeat,no-repeat;
-    background-position:right bottom,0 0;
-    background-size:auto,cover;
+    background-image:url('../images/global/bg_subCon_txt_top.png'),url('../images/global/bg_subCon_txt.png'),url('../images/global/bg_subCon_txt.jpg');
+    background-repeat:no-repeat,no-repeat,no-repeat;;
+    background-position:left top,right bottom,0 0;
+    background-size:auto,auto,cover;
     display:table-cell;min-height:95px;vertical-align: middle;text-align:center;padding:15px 100px;}
 .recipe-txt p {text-align:left;}
 .racipe-stuff {margin-top:50px}
@@ -109,7 +110,7 @@ address {margin-bottom:0;}
 .replyList .list .left {float:left;text-align:center}
 .replyList .list .left p {color:#fa5623;font-size:14px;margin-top:10px;}
 .replyList .list .imgAvata {display:block;width:65px;height:65px;border-radius: 50%}
-.replyList .list .right {float:right;margin-left:15px;width:90%}
+.replyList .list .right {float:right;margin-left:15px;width:77%}
 .replyList .list .right .info {font-size:16px;font-weight:bold;color:#2b2b2b;margin-bottom:12px}
 .replyList .list .right .info span {display:inline-block;margin-left:15px;font-size:14px;vertical-align: bottom;color:#a3a3a3}
 .replyList .list .right .txt {color:#393939}
@@ -123,10 +124,42 @@ address {margin-bottom:0;}
 .replyList .replyReplyInp.inp {display:none;}
 .replyList .list .right .replyReplyInp .info {margin:5px 0 0px 0}
 
+.pageControl a {display:table;background:#f6f6f6;width:210px;min-height:60px;color:#6f6f6f;position:absolute;top:400px}
+.pageControl a:hover {color:#3b3b3b}
+.pageControl .inner {display:table-cell;vertical-align:middle;overflow:hidden;}
+.pageControl .inner > span {float:left;color:rgba(214,214,214,0.5);font-size:38px}
+.pageControl .inner > p {float:left;}
+.pageControl a p span {display:block}
+.pageControl a:hover {text-decoration:none;}
+.pageControl .prevCon {left:0;}
+.pageControl .nextCon {right:0;padding-left:10px;}
+.pageControl .nextCon .inner > span {float:right}
+.pageControl .nextCon .inner > p {float:left;}
+
+/* recipe_preview */
+.preview {position:fixed;left:0;top:0;width:100%;height:50px;line-height:50px;text-align:center;background:#747474;z-index:1000;}
+.preview p {color:#fff;font-size:200%}
+.preview a {position:absolute;right:10px;color:#fff;float:right;font-size:220%;top:50%;margin-top:-20px}
+.preview a:hover {text-decoration:none;}
 
 @media (max-width: 320px) {
     body {font-size:80%}
+    .recipeMake .num {width:20px;height:20px;line-height:24px;font-size:15px;}
+    .recipeMake .contents {width:83%;margin-top:3px;}
+    .myTip {padding:25px 10px}
+    .myTip .tooltipTxt {width:50px;}
+    .recipeTag dd {font-size:80%;float:left;padding:5px;}
+    .recipeTag dt {font-size:14px;}
+    .recipeTag dl {padding-left:0px;}
+    .recipe-txt {padding:75px 15px}
+    .replyList .list .right {width:70%}
+    .replyList .list .right .info {font-size:12px;margin-bottom:5px}
+    .replyList .list .right .info span {margin-left:0;}
+    .pageControl a {width:25%;top:295px;background:rgba(163,163,163,0.6)}
+    .pageControl a .inner p {display:none;}
+    .preview a {margin-top:-10px;}
 }
+
 
 
 @media (min-width: 768px) {
@@ -146,12 +179,18 @@ address {margin-bottom:0;}
     .racipe-stuff {width:75%;padding:0}
     .reple h2 {font-size:26px;}
     .pull-left.tip {width:58%}
+    .replyList .list .right {width:85%}
+    .pageControl a {top:500px}
+
+    .preview {height:100px;line-height:100px;}
 }
 
 
 @media (min-width: 992px) {
     .racipe-stuff {width:810px}
     .recipeMake .text {width:65%}
+    .replyList .list .right {width:90%}
+    .pageControl a {top:500px}
 }
 
 
