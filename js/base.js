@@ -18,5 +18,11 @@ $(document).ready(function(){
     return false;
   });
 
+  //메인 이미지등록
+
+  //재료 인원수
+
+  //재료 내용물복사
+
 
 });
