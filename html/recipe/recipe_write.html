@@ -120,6 +120,7 @@
                                             <p>이미지추가</p>
                                         </div>
                                         <img src="../../images/global/img_no_img.jpg" alt="" class="inpImg"/>
+                                        <input type="file" name="" id="prevImg" class="hiddenFile"/>
                                     </div>
                                 </div>
                                 <textarea name="" id="" cols="30" rows="0" class="form-control"></textarea>
@@ -239,6 +240,11 @@
             };
             $('#inpImg').setPreview(opt);
         })
+
+        //조리과정 이미지 등록미리보기
+        $('.imgAdd').click(function(){
+
+        });
 
         //시발 재료인원수 체크
         var humanNUM = $('#chkNum').text();
