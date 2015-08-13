@@ -43,6 +43,10 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
+
+        <form action="">
+        <fieldset>
+        <legend>입력양식</legend>
         <div class="page-header-tit">
             <h1><label for="title1"></label>제목 <span>*</span> <input type="text" name="" id="title1"/></h1>
         </div>
@@ -56,7 +60,7 @@
                             <p>최소 하나의 사진이 필요합니다.</p>
                              <button type="button" onclick=""><strong>+</strong> 메인 이미지 등록</button>
                          </div>
-                         <img src="../../images/global/img_no_img.jpg" alt="" class="inpImg"/>
+                         <div id="previewId"><img src="../../images/global/img_no_img.jpg" alt="" class="inpImg"/></div>
                      </div>
                      <input type="file" name="" id="inpImg" class="hiddenFile"/>
                  </div>
@@ -68,7 +72,7 @@
                     </div>
                 </div>
                 <div class="recipeWriteBox clearfix">
-                    <label for="list1">재료 <span class="required">*</span></label>
+                    <label for="chkNum">재료 <span class="required">*</span></label>
                     <div class="right chkNum">
                         <div class="inner">
                             <p class="pull-left">레시피에 맞는 최적의 인분수를 적어주세요!</p>
@@ -85,46 +89,119 @@
                             <ul>
                                 <!--복사영역 start-->
                                 <li>
-                                    <input type="text" name="" id="list1" placeholder="재료명" class="form-control w270"/>
-                                    <input type="text" name="" id="" placeholder="수량" class="form-control w55 num"/>
-                                    <select name="" id="" class="form-control w88">
+                                    <input type="text" name="" id="itemName" placeholder="재료명" class="form-control w270"/>
+                                    <input type="text" name="" id="itemNum" placeholder="수량" class="form-control w55 num"/>
+                                    <select name="" id="itemType" class="form-control w88">
                                         <option value="0">단위</option>
                                     </select>
                                     <div class="control">
                                         <button type="button" class="glyphicon glyphicon-triangle-top"></button>
                                         <button type="button" class="glyphicon glyphicon-triangle-bottom"></button>
                                     </div>
-                                    <button type="button" class="glyphicon glyphicon-remove"></button>
+                                    <button type="button" onclick="deleteMe(this)" class="glyphicon glyphicon-remove"></button>
                                 </li>
                                 <!--복사영역 send-->
-                                <li>
-                                    <input type="text" name="" id="list1" placeholder="재료명" class="form-control w270"/>
-                                    <input type="text" name="" id="" placeholder="수량" class="form-control w55 num"/>
-                                    <select name="" id="" class="form-control w88">
-                                        <option value="0">단위</option>
-                                    </select>
-                                    <div class="control">
-                                        <button type="button" class="glyphicon glyphicon-triangle-top"></button>
-                                        <button type="button" class="glyphicon glyphicon-triangle-bottom"></button>
-                                    </div>
-                                    <button type="button" class="glyphicon glyphicon-remove"></button>
-                                </li>
                             </ul>
-                            <a href="#" class="pull-right form-control"><span>+</span> 재료추가하기</a>
+                            <a href="#" class="pull-right form-control"><span>+</span> 재료 추가하기</a>
                         </div>
                     </div>
                 </div>
-                <div class="recipeWriteBox clearfix">
+                <div class="recipeWriteBox clearfix making">
                     <label for="">조리과정 <span class="required">*</span></label>
                     <div class="right">
                         <p class=" cookTime text-right">조리시간 <input type="text" name="" id="" class="form-control w55"/> 분</p>
                         <ul class="clearfix">
-                            <li>dd</li>
+                            <!--복사영역 start-->
+                            <li class="clearfix">
+                                <div class="imgArea">
+                                    <div class="inner">
+                                        <div class="activeArea">
+                                            <button type="button" class="imgAdd"><span class="glyphicon glyphicon-plus"></span></button>
+                                            <p>이미지추가</p>
+                                        </div>
+                                        <img src="../../images/global/img_no_img.jpg" alt="" class="inpImg"/>
+                                    </div>
+                                </div>
+                                <textarea name="" id="" cols="30" rows="0" class="form-control"></textarea>
+                                <div class="control">
+                                    <button type="button" class="glyphicon glyphicon-triangle-top"></button>
+                                    <button type="button" class="glyphicon glyphicon-triangle-bottom"></button>
+                                </div>
+                                <button type="button" onclick="deleteMe(this)" class="glyphicon glyphicon-remove"></button>
+                            </li>
+                            <!--복사영역 end-->
                         </ul>
+                        <a href="#" class="pull-right form-control"><span>+</span> 과정 추가하기</a>
                     </div>
                 </div>
+
+                <div class="recipeWriteBox clearfix note">
+                    <label for="note">시크릿 노트</label>
+                    <div class="right">
+                        <textarea name="" id="note" cols="30" rows="10" class="form-control" placeholder="당신만의 요리 비밀을 전수해주세요!"></textarea>
+                    </div>
+                </div>
+
+                <div class="recipeWriteBox clearfix cate">
+                    <label for="cate">카테고리 <span class="required">*</span></label>
+                    <div class="right">
+                        <select name="" id="cate" class="form-control">
+                            <option value="0">음식 분류를 선택해 주세요.</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="recipeWriteBox clearfix tag">
+                    <label for="tagTxt">태그</label>
+                    <div class="right">
+                        <input type="text" name="" id="tagTxt" class="form-control" placeholder="태그를 직접 입력하세요.','쉼표로 태그가 구분됩니다."/>
+                        <ul class="tagList">
+                            <li><a href="#">#리코타치즈</a></li>
+                            <li><a href="#">#브런치</a></li>
+                            <li><a href="#">#드레싱</a></li>
+                            <li><a href="#">#최대글자제한수가 없습니다.</a></li>
+                        </ul>
+                        <div class="form-control selectTag mgT15">
+                            <p><span class="glyphicon glyphicon-chevron-down"></span>내가 선택한 태그</p>
+                            <ul class="tagList">
+                                <li><a href="#">#리코타치즈</a><button type="button" onclick="deleteMe(this)">x</button></li>
+                                <li><a href="#">#브런치</a><button type="button" onclick="deleteMe(this)">x</button></li>
+                                <li><a href="#">#드레싱</a><button type="button" onclick="deleteMe(this)">x</button></li>
+                                <li><a href="#">#드레싱</a><button type="button" onclick="deleteMe(this)">x</button></li>
+                                <li><a href="#">#드레싱</a><button type="button" onclick="deleteMe(this)">x</button></li>
+                                <li><a href="#">#드레싱</a><button type="button" onclick="deleteMe(this)">x</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipeWriteBox clearfix selected">
+                    <label for="selected">선택 <span class="required">*</span></label>
+                    <div class="right">
+                        <select name="" id="selected" class="form-control">
+                            <option value="0">콘테스트 선택</option>
+                        </select>
+                        <label  for="chk01">에 해당 레시피로 참가합니다!</label>
+                        <input type="checkbox" name="" id="chk01" class="joinChk"/>
+                    </div>
+                </div>
+
+                <div class="recipeWriteBox agree">
+                    <div class="right">
+                        <input type="checkbox" name="" id="agree"/> <label for="agree">저의 오리지널 레시피라는 것을 약속합니다.</label>
+                    </div>
+                </div>
+
+                <div class="btnGroup center">
+                    <a href="#" class="form-control orange">중간저장</a>
+                    <a href="#" class="form-control">미리보기</a>
+                </div>
+
             </div>
         </div>
+
+        </fieldset>
+        </form>
 
 
 
@@ -151,9 +228,61 @@
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/base.js"></script>
 <script>
-    //메인 이미지등록
-    //재료 인원수
+    $(document).ready(function(){
+        //메인 이미지 등록미리보기
+        $('.inputIMG button').click(function() {
+            $('.hiddenFile').click();
+            var opt = {
+                img: $('.inpImg'),
+                w: 440,
+                h: 210
+            };
+            $('#inpImg').setPreview(opt);
+        })
 
+        //시발 재료인원수 체크
+        var humanNUM = $('#chkNum').text();
+        $('.chkNum button').click(function(){
+            var $this = $(this);
+          if($this.hasClass('glyphicon-triangle-top')){
+              humanNUM++;
+              $('#chkNum').text(humanNUM);
+          }else{
+              if(humanNUM == 1){
+                  humanNUM=1;
+              }else{
+                  humanNUM--;
+              }
+              $('#chkNum').text(humanNUM);
+          }
+        });
+
+
+        //재료추가하기
+        var additemNum = 1;
+        $('.recipeWriteBox .itemList a.pull-right').click(function(){
+            var $this = $(this);
+            var $target = $this.parent().find('ul li:first-child');
+            var $itemName = $target.find('#itemName').attr('id');
+            var $itemNum = $target.find('#itemNum').attr('id');
+            var $itemType = $target.find('#itemType').attr('id');
+            $target.clone().appendTo($this.parent().find('ul'));
+            var $newTar = $this.parent().find('ul li:last-child');
+            $newTar.find('#itemName').attr('id',$itemName+additemNum).val('');
+            $newTar.find('#itemNum').attr('id',$itemNum+additemNum).val('');
+            $newTar.find('#itemType').attr('id',$itemType+additemNum);
+            $newTar.find('#itemType option:selected').text('단위');
+            additemNum++
+            return false;
+        });
+
+
+    }); //end ready
+
+    //추가한 아이탬 삭제
+    function deleteMe(tar){
+        $(tar).parent().remove();
+    }
 </script>
 <!--script AREA-->
 </body>

@@ -3,6 +3,7 @@
 body {font-family: 'Nanum Barun Gothic', sans-serif;font-size:15px;}
 p {margin:0;}
 h2 {font-size:23px;}
+ul {list-style:none;padding:0;}
 /*body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-size:15px}*/
 #topLine {width:100%;height:25px;background:#e7e6e6;border-bottom:1px solid #dcd9d9}
 .navbar-default {background:none;border:none;border-bottom:1px solid #dcd9d9}
@@ -153,13 +154,13 @@ address {margin-bottom:0;}
 .recipeWrite .page-header-tit h1 input[type='text'] {border:none;background:none;width:510px;}
 .recipeWriteBox {width:620px;margin:25px auto 0 auto;padding-top:25px;border-top:1px solid #e3e3e3;padding-right:30px;}
 .recipeWriteBox:first-child {margin-top:45px;padding-top:0;border-top:none}
-.recipeWriteBox label {display:block;float:left;width:120px;font-size:18px;color:#3f3f3f;text-align:right}
+.recipeWriteBox > label {display:block;float:left;width:120px;font-size:18px;color:#3f3f3f;text-align:right}
 .recipeWriteBox .required {font-size:90%;vertical-align: super;color:#d60d7f}
 .recipeWriteBox .right {width:440px;float:right;}
 .recipeWriteBox .inputIMG {height:210px;display:table;position:relative;}
 .recipeWriteBox .inputIMG .inner {display:table-cell;vertical-align:middle;position:relative;z-index:1;text-align:center;}
-.recipeWriteBox .inputIMG .inner p {color:rgba(255,255,255,0.5);font-size:18px}
-.recipeWriteBox .inputIMG .inner button {border:1px solid #fff;color:#fff;background:none;padding:5px 10px;border-radius:5px;font-size:16px;margin-top:15px;}
+.recipeWriteBox .inputIMG .inner p {color:rgba(255,255,255,0.7);font-size:18px}
+.recipeWriteBox .inputIMG .inner button {border:1px solid rgba(255,255,255,0.7);color:rgba(255,255,255,0.7);background:none;padding:5px 10px;border-radius:5px;font-size:16px;margin-top:15px;}
 .recipeWriteBox .inputIMG .inpImg {position:absolute;left:0;top:0;z-index:0;border:1px solid #ccc}
 .recipeWriteBox .inputIMG .inpImg img {width:100%;height:100%;}
 .recipeWriteBox .hiddenFile {position:absolute;left:0;top:0;visibility: hidden;height:0;font-size:0;width:0;display:block;}
@@ -175,14 +176,58 @@ address {margin-bottom:0;}
 .recipeWriteBox .itemList select,
 .recipeWriteBox .itemList input {display:inline-block;color:#999}
 .recipeWriteBox .itemList .num {margin:0 10px;}
-.recipeWriteBox .itemList .control {position:absolute;left:-25px;top:0;}
-.recipeWriteBox .itemList .control button {background:none;border:none;display:block;color:#e0e0e0;margin:0;padding:0}
-.recipeWriteBox .itemList .control .glyphicon-triangle-top {;margin-bottom:1px;border-bottom:1px solid #c8c8c8}
-.recipeWriteBox .itemList .glyphicon-remove {border:none;background:none;padding:0;position:absolute;right:-30px;top:10px;color:#979797}
+.recipeWriteBox .control {position:absolute;left:-25px;top:0;}
+.recipeWriteBox .control button {background:none;border:none;display:block;color:#e0e0e0;margin:0;padding:0}
+.recipeWriteBox .control .glyphicon-triangle-top {;margin-bottom:1px;border-bottom:1px solid #c8c8c8}
+.recipeWriteBox .glyphicon-remove {border:none;background:none;padding:0;position:absolute;right:-30px;top:10px;color:#979797}
 .recipeWriteBox .itemList .pull-right {width:120px;margin-top:20px;}
 .recipeWriteBox .itemList .pull-right:hover {text-decoration:none;}
 .recipeWriteBox .form-control {display:inline-block;}
 .recipeWriteBox .cookTime .w55 {margin:0 5px}
+.recipeWriteBox.making ul {margin-top:15px;}
+.recipeWriteBox.making ul li {position:relative;margin-top:20px;}
+.recipeWriteBox.making ul li .imgArea {display:table;float:left;width:120px;height:90px;}
+.recipeWriteBox.making ul li .imgArea .inner {display:table-cell;position:relative;text-align:center;vertical-align: middle;}
+.recipeWriteBox.making ul li .imgArea .inner img {position:absolute;left:0;top:0;z-index:0;}
+.recipeWriteBox.making ul li .imgArea .inner .activeArea {position:relative;z-index:1;color:rgba(255,255,255,0.7);display:inline-block}
+.recipeWriteBox.making ul li .control {top:30px;}
+.recipeWriteBox.making ul li .glyphicon-remove {top:0px;}
+.recipeWriteBox.making ul li:first-child {margin-top:0;}
+.recipeWriteBox.making ul li:first-child .glyphicon-remove {visibility:hidden;}
+.recipeWriteBox.making .pull-right {width:120px;margin-top:20px;}
+.recipeWriteBox.making .pull-right:hover {text-decoration:none;}
+.recipeWriteBox.making .inpImg {width:120px;height:90px;}
+.recipeWriteBox.making .inpImg img {width:100%;height:100%;}
+.recipeWriteBox.making textarea.form-control {width:305px;height:90px;float:right;}
+.recipeWriteBox.making .imgAdd {background:none;color:#fff;border:1px solid rgba(255,255,255,0.7);border-radius:50%;width:40px;height:40px;margin-bottom:5px;font-size:16px;line-height:40px;text-align:center;}
+.recipeWriteBox.note textarea {height:100px;}
+.recipeWriteBox.tag {background:#fafafa;padding-bottom:25px;}
+.recipeWriteBox.tag .tagList {margin-top:10px;}
+.recipeWriteBox.tag .tagList li {display:inline-block;border:1px solid #c1c1c1;border-radius:5px;margin-top:15px;background:#fff;}
+.recipeWriteBox.tag .tagList li a {color:#3f3f3f;display:block;padding:5px 13px;}
+.recipeWriteBox.tag .tagList li a:hover {text-decoration:none;}
+.recipeWriteBox.tag .form-control {height:auto;}
+.recipeWriteBox.tag .selectTag p {margin-top:14px;position:relative}
+.recipeWriteBox.tag .selectTag p span {position:absolute;top:-13px;color:#e5e5e5}
+.recipeWriteBox.tag .selectTag .tagList li {background:#515151;border-color:#474747;padding:0px 13px 3px 13px;margin-top:10px;}
+.recipeWriteBox.tag .selectTag .tagList li a {color:#c4c4c4;display:inline-block;padding:0}
+.recipeWriteBox.tag .selectTag .tagList li button {background:none;color:#fff;border:none;padding:0;display:inline-block;vertical-align: super;margin-left:5px;}
+.recipeWriteBox.selected {margin-top:0;border-top:none;}
+.recipeWriteBox.selected #selected {margin-right:10px;width:240px;text-align:center;}
+.recipeWriteBox.selected .right {position:relative;}
+.recipeWriteBox.selected .joinChk {position:absolute;right:-20px;top:6px;}
+.recipeWriteBox.agree {border:1px solid #e3e3e3;background:#f2f2f2;height:50px;line-height:50px;padding:0;}
+.recipeWriteBox.agree input[type="checkbox"] {margin-right:5px;line-height:50px;}
+
+.btnGroup {width:100%;overflow:hidden;margin-top:35px;}
+.btnGroup.center {text-align:center}
+.btnGroup a {display:inline-block;margin-left:5px;width:140px;color:#fff;background:#3d3d3d;border-color:#343434}
+.btnGroup a:hover {text-decoration:none;}
+.btnGroup a.orange {background:#eb6741;border-color:#d8603f}
+.btnGroup a:first-child {margin-left:0;}
+
+
+
 @media (max-width: 320px) {
     body {font-size:80%}
     .recipeMake .num {width:20px;height:20px;line-height:24px;font-size:15px;}
