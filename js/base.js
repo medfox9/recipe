@@ -81,8 +81,17 @@ $.fn.setPreview = function(opt){
   });
 };
 
+//clone textarea fixed
+(function (original) {
+  jQuery.fn.clone = function () {
+    var       result = original.apply (this, arguments),
+        my_textareas = this.find('textarea'),
+        result_textareas = result.find('textarea');
 
+    for (var i = 0, l = my_textareas.length; i < l; ++i)
+      $(result_textareas[i]).val ($(my_textareas[i]).val());
 
-//재료 인원수
+    return result;
+  };
+}) (jQuery.fn.clone);
 
-//재료 내용물복사

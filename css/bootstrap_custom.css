@@ -4,6 +4,8 @@ body {font-family: 'Nanum Barun Gothic', sans-serif;font-size:15px;}
 p {margin:0;}
 h2 {font-size:23px;}
 ul {list-style:none;padding:0;}
+a:active,
+a:visited {text-decoration:none !important;}
 /*body {font-family:'NanumGothic','나눔 고딕','맑은 고딕','dotum';font-size:15px}*/
 #topLine {width:100%;height:25px;background:#e7e6e6;border-bottom:1px solid #dcd9d9}
 .navbar-default {background:none;border:none;border-bottom:1px solid #dcd9d9}
@@ -228,9 +230,11 @@ address {margin-bottom:0;}
 .btnGroup a.orange {background:#eb6741;border-color:#d8603f}
 .btnGroup a:first-child {margin-left:0;}
 
-
+#navbar {padding-left:0;pdding-right:0;}
+.navbar > .container {padding:0;}
 
 /*recipe_list */
+.recipeList .col-lg-11 {max-width:1200px;}
 .recipeList .page-header-tit {background:#f6f6f6;line-height:0;}
 .recipeList .page-header-tit input[type="text"] {width:88%;display:inline-block}
 .recipeList .page-header-tit select {width:50%;display:inline-block;margin-bottom:10px;}
@@ -254,7 +258,7 @@ address {margin-bottom:0;}
 .recipeListRight .listBox > div .imgArea {position:relative;}
 .recipeListRight .listBox > div .imgArea:hover .hover {display:block;}
 .recipeListRight .listBox > div .hover {position:absolute;left:0;top:0;background:rgba(0,0,0,0.5);width:100%;height:100%;text-align:center;display:none;}
-.recipeListRight .listBox > div .hover a {display:inline-block;padding:5px 10px;width:50%;background:rgba(0,0,0,0.5);color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.recipeListRight .listBox > div .hover a {display:inline-block;padding:5px 10px;width:60%;background:rgba(0,0,0,0.5);color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
 .recipeListRight .listBox > div .hover a span {color:#ee4409;margin-right:5px;}
 .recipeListRight .listBox > div .hover a:hover {text-decoration:none;}
 
@@ -263,6 +267,7 @@ address {margin-bottom:0;}
 .recipeListRight .listBox > div .img {width:100%;border-bottom:1px solid #efedee;}
 .recipeListRight .listBox > div .bottom {padding:0 10px;overflow:hidden;}
 .recipeListRight .listBox > div .favorites {border:1px solid #bdbdbd;border-radius:5px;padding:3px 10px;display:inline-block;color:#7b7b7b;overflow:hidden;text-align:right;margin-top:10px;}
+.recipeListRight .listBox > div .favorites:hover {text-decoration:none;color:#c12e2a}
 .recipeListRight .listBox > div .favorites span {margin-top:3px;margin-right:5px;}
 .recipeListRight .listBox > div .name span img {border-radius:50%;width:44px;height:44px;}
 .recipeListRight .moreList a {display:inline-block;width:280px;color:#3f3f3f;background:#eaeaea;padding:10px 0;margin-top:40px;}
@@ -309,8 +314,8 @@ address {margin-bottom:0;}
     .replyList .list .right {width:85%}
     .pageControl a {top:500px}
     .preview {height:100px;line-height:100px;}
-    .recipeList .page-header-tit input[type="text"] {width:75%;margin-left:0.5%;margin-bottom:0}
-    .recipeList .page-header-tit select {width:20%;}
+    .recipeList .page-header-tit input[type="text"] {width:75%;margin-bottom:0}
+    .recipeList .page-header-tit select {width:20%;margin-left:0.5%;}
     .recipeListRight .top p {font-size:18px;font-weight:bold;}
     .recipeListRight dl.pull-right dt {float:left;font-size:18px;font-weight:bold;}
 }
