@@ -60,9 +60,9 @@
                             <p>최소 하나의 사진이 필요합니다.</p>
                              <button type="button" onclick=""><strong>+</strong> 메인 이미지 등록</button>
                          </div>
-                         <div id="previewId"><img src="../../images/global/img_no_img.jpg" alt="" class="inpImg"/></div>
+                         <div id="previewId"><img src="../../images/global/img_no_img.jpg" alt="" class="inpMain inpImg"/></div>
                      </div>
-                     <input type="file" name="" id="inpImg" class="hiddenFile"/>
+                     <input type="file" name="" id="inpImg" class="imgMain hiddenFile"/>
                  </div>
                 <div class="recipeWriteBox clearfix">
                     <label for="story">레시피 이야기 <span class="required">*</span></label>
@@ -119,7 +119,7 @@
                                             <button type="button" class="imgAdd"><span class="glyphicon glyphicon-plus"></span></button>
                                             <p>이미지추가</p>
                                         </div>
-                                        <img src="../../images/global/img_no_img.jpg" alt="" class="inpImg"/>
+                                        <img src="../../images/global/img_no_img.jpg" alt="" class="makeing inpImg"/>
                                         <input type="file" name="" id="prevImg" class="hiddenFile"/>
                                     </div>
                                 </div>
@@ -232,9 +232,9 @@
     $(document).ready(function(){
         //메인 이미지 등록미리보기
         $('.inputIMG button').click(function() {
-            $('.hiddenFile').click();
+            $('.imgMain').click();
             var opt = {
-                img: $('.inpImg'),
+                img: $('.inpMain'),
                 w: 440,
                 h: 210
             };
