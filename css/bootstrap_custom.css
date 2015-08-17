@@ -251,7 +251,7 @@ address {margin-bottom:0;}
 .recipeListRight dl.pull-right dd {float:left;margin-left:20px;}
 .recipeListRight dl.pull-right dd a {color:#585858;}
 .recipeListRight dl.pull-right dd.on a span {color:#d58512}
-.recipeListRight .inRow {margin:-40px 0 0 0}
+.recipeListRight .inRow {position:relative;top:-40px}
 .recipeListRight .listBox {margin-top:1px;}
 .recipeListRight .listBox .col-lg-3 {margin-top:40px;}
 .recipeListRight .listBox > div {padding-right:0;}
