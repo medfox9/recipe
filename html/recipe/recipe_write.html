@@ -264,7 +264,7 @@
 
 
         //재료추가하기
-        var additemNum = 1;
+        var additemNum = $('.itemList ul li').size();
         $('.recipeWriteBox .itemList a.pull-right').click(function(){
             var $this = $(this);
             var $target = $this.parent().find('ul li:first-child');
@@ -282,7 +282,7 @@
         });
 
         //조리과정 추가하기
-        var addMakeNum = 1;
+        var addMakeNum = $('.makeTarget li').size();
         $('.recipeWriteBox.making .pull-right').click(function(){
             var $target =$('.makeTarget li:first-child');
             var $txt = $target.find('#chkTextArea').attr('id');
