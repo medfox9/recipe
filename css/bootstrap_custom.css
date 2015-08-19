@@ -69,7 +69,7 @@ address {margin-bottom:0;}
     background-position:left top,right bottom,0 0;
     background-size:auto,auto,cover;
     display:table-cell;min-height:95px;vertical-align: middle;text-align:center;padding:15px 100px;}
-.recipe-txt p {text-align:left;}
+.recipe-txt p {text-align:left;padding:20px 0;}
 .racipe-stuff {margin-top:50px}
 .racipe-stuff .top select {margin-top:20px}
 .racipe-stuff .stuffTxt ul {
@@ -101,7 +101,14 @@ address {margin-bottom:0;}
 .recipeTag dt {float:left;font-size:20px;margin-top:16px;position:absolute;left:0;}
 .recipeTag dd {float:right;font-size:16px;background:#f2f2f2;padding:10px;margin-left:10px;border-radius: 5px;margin-top:10px;}
 
-/*댓글*/
+.openMore .upSide {display:none;}
+.openMore.on .upSide {display:inline}
+.openMore.on .downSide {display:none;}
+.recipeMake.moreActive {background:#fafafa;padding-top:30px;}
+.recipeMake.moreActive .makeNum {background:#fff;border:1px solid #e9e8e8;padding:18px;}
+.recipeMake.moreActive .makeNum .image {width:100%;height:auto;float:none;;margin:0 0 18px 0}
+
+    /*댓글*/
 .recipeReply h2 {font-size:24px;font-weight:800;color:#343434}
 .recipeReply h2 span {color:#fa5623}
 .replyBox {background:url('../images/global/bg_canvers.png') repeat 0 0;padding:10px;}
@@ -272,6 +279,7 @@ address {margin-bottom:0;}
 .recipeListRight .listBox > div .name span img {border-radius:50%;width:44px;height:44px;}
 .recipeListRight .moreList a {display:inline-block;width:280px;color:#3f3f3f;background:#eaeaea;padding:10px 0;margin-top:40px;}
 .recipeListRight .moreList a:hover {text-decoration:none;}
+.openMore {}
 
 
 @media (max-width: 320px) {
